@@ -1,0 +1,125 @@
+/****  SOLANA COLORING  ****/
+.bg-solana-gradient {
+  background: linear-gradient(90deg, #00FFA3, #DC1FFF, #9945FF);
+}
+
+.text-solana-gradient {
+  background: linear-gradient(90deg, #00FFA3, #DC1FFF, #9945FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/****  FONT STYLES  ****/
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-kanit {
+  font-family: 'Kanit', sans-serif;
+}
+
+/****  FADES  ****/
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.fade-in-out {
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+      -webkit-transform: rotateX(-100deg);
+      transform: rotateX(-100deg);
+      -webkit-transform-origin: top;
+      transform-origin: top;
+      opacity: 0;
+  }
+  100% {
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+      transform-origin: top;
+      opacity: 1;
+  }
+}
+
+header {
+  animation: fadeInAnimation ease 3s;
+  animation: swing-in-top-fwd ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+body {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/****  FONT STYLES  ****/
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+      color: transparent;
+  }
+  50% {
+      color: rgb(255, 255, 255);
+  }
+  100% {
+      color: transparent;
+  }
+}
+
+.text-animate {
+  animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
+}
+
+.text-animate span {
+  display: inline-block;
+  animation: colorChange 3s infinite;
+}
