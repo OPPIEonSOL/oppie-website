@@ -10,6 +10,13 @@
   color: transparent;
 }
 
+/***  Purple Bold Text  ***/
+.text-purple-bold {
+    font-weight: bold;
+    color: #9b59b6; /* Bright purple color */
+  }
+
+
 /****  FONT STYLES  ****/
 .font-orbitron {
   font-family: 'Orbitron', sans-serif;
